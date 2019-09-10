@@ -20,7 +20,7 @@ namespace Factory
         public static IDrawBoard CreateDrawBoard(bool has_debug )
         {
             int board_size = 10;
-            var gen = new ShipGenerator(board_size)//.EnableDebug();
+            var gen = new ShipGenerator(board_size);//.EnableDebug();
 
             return new DrawBoard(new List<IDestroyer>() {
                   new Ships(5,gen.GenerateShipCoordonates(5)),
